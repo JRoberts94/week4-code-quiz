@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap"
+      rel="stylesheet"/>
+    <title>Code Quiz</title>
+  </head>
+  <body>
+    <div class="welcome">
+      <h2 id="heading-title">Welcome to my Code Quiz!</h2>
+      <!-- timer -->
+      <h4 id="timer" class="hide">60</h4>
+      <!-- start game button -->
+      <button id="start-btn">Start Game</button>
+    </div>
+
+    <section id="section-question" class="hide">
+      <!-- question section -->
+      <h1 id="question-title">question</h1>
+      <!-- choices -->
+      <ul id="question-choices">
+        <li><button class="question-choice">ANSWER</button></li>
+        <li><button class="question-choice">ANSWER</button></li>
+        <li><button class="question-choice">ANSWER</button></li>
+        <li><button class="question-choice">ANSWER</button></li>
+        
+      </ul>
+      
+    </section>
+
+    <!-- end game screen -->
+    <section id="end-game" class="hide">
+      <h1>Game Over!</h1>
+      <p id="highscore">
+        Your Final Score is: <span id="score-span">0</span> /6
+      </p>
+      <!-- form to enter initials -->
+      <form id="initials-input">
+        <input
+          id="initials"
+          type="text"
+          placeholder="Enter Your Initials Here"
+        />
+        <!-- button to save initials -->
+        <button id="save-button" type="submit">Save</button>
+        <!-- both buttons will need to stop default on js file -->
+        <button id="restart-btn" class="restart-btn btn">Restart</button>
+      </form>
+      <section id="high-scores">
+        <h1 class="highscore-title">High Scores</h1>
+      
+      </section>
+    </section>
+    <div id="correct" class="hide">
+      <h2>Correct! :)</h2>
+    </div>
+    <div id="wrong" class="hide">
+      <h2>Incorrect! :(</h2>
+    </div>
+    <!-- all the high scores pages -->
+
+    <!-- hide everything except welcome to quiz + start button with display none on CSS -->
+
+    
+    <script src="./Assets/javascript/questions.js"></script>
+    <script src="./Assets/javascript/app.js"></script>
+  </body>
+</html>
