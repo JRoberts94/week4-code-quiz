@@ -26,7 +26,7 @@ let timeRemaining = 0;
 let score = 0;
 
     
-//show timer, timer starts
+//show timer, timer starts when start button clicked, hide other elements
 startGameButton.addEventListener('click', function(event){
     timerEl.classList.remove('hide');
     startGameButton.classList.add('hide');
@@ -38,7 +38,7 @@ startGameButton.addEventListener('click', function(event){
     startTimer();
 });
 
-
+// starts timer, hides + shows relevent elements, sets timer number and limit 
 function startTimer(){
     timeRemaining = 60;
     const timerId = setInterval(function(){
@@ -61,14 +61,7 @@ function startTimer(){
     
 };
 
-function stopTimer(event){
-    score = timeRemaining;
-
-    clearInterval(timerId);
-
-};
-
-
+//creates the loops for the questions objects/arrays
 function renderQuestions(questionIndex){
     welcomeH3.classList.add('hide');
     // get the question
@@ -114,7 +107,7 @@ function renderQuestions(questionIndex){
 
             if(nextQuestionIndex >= questions.length){
                 return gameOver()
-                stopTimer()
+                
             }
 
 
@@ -156,7 +149,8 @@ function gameOver(event) {
 
 
 
-//when user clicks save button, store initials + score to local storage 
+//when user clicks save button, store initials + score to local storage
+//then adds elements for user data on highscore, end game 
 saveButton.addEventListener('click', function(event){
     event.preventDefault();
     const initials = userInput.value;
@@ -181,15 +175,16 @@ saveButton.addEventListener('click', function(event){
             
             allScores.push(finalScore);
             
-                        // limit to 10 records
+                        // limit to 4 score records
+                        
             
-                        // if allScores 's length is > 5 
-                        // if (allScores.length >= 4){
-                        //     // then get the latest 5 items in the array only 
-                        //     let num = 4
-                        //     const slicedScores = allScores.slice(0, num);
-                        //     return slicedScores;
-                        // }
+                        // if allScores length is > 4 
+                        if (allScores.length >= 4){
+                            // then get the latest 5 items in the array only 
+                            let num = 4
+                            allScores = allScores.slice(0, num);
+                            
+                        }
                         
 
             const newScore = JSON.stringify(allScores);
