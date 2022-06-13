@@ -213,66 +213,7 @@ saveButton.addEventListener('click', function(event){
         };
 
         
-        
-        // for (var i = 0, len = localStorage.length; i < len; ++i) {
-        //     element.textContent = localStorage.getItem(localStorage.key(i))
-        
-        // const li = document.createElement('li');
-        
-        //     li.setAttribute('class', 'highscore-items');
-        //     li.textContent = prevScores;
-        //     document.body.append(li);
-            // li.textContent = initialsInput;
-    });
-
-
-
-    // let initials = userInput.text;
-
-    // const li = document.createElement('li');
-        
-    // li.setAttribute('class', 'highscore-items');
-    // li.textContent = "";
-
-
-    // let highscoreEl = document.getElementById("highscore-title")
-    // let highscores = document.getElementById("highscore-items")
-
-    // document.body.append(li);
-    // li.textContent = userInput.value + " - " + score;
-
-    // if(userInput.value === ""){
-    //     console.log("No value entered");
-    //     alert("Please enter your initials")
-    
-
-       
-        
-
-    // }
-    
-    // saveHighscore()
-// })
-
-
-
-
-// function saveHighscore(event){
-//     const userScore = userInput + score;
-//     window.localStorage.setItem('userInitials', 'timeScore');
-//     const userSaves = {
-//         userInitials: "",
-//         timeScore: 0,
-//     }
-//     window.localStorage.setItem('users', JSON.stringify(userSaves));
-    
-    
-// };
-
-
-//on high score page, show previous scores + initials
-//have button to return to quiz home page, restart
-
+    });  
 
 
 

@@ -42,21 +42,4 @@ JavaScript
 * [Link to github Repository](https://github.com/JRoberts94/week4-code-quiz)
 * ![Screenshot](./assets/images/week4-code-quiz-screenshot.png)
 
-### 
-
-
-
-### 
-
-
-
-### 
-
-
-
-### 
-
-
-
-## 
 
